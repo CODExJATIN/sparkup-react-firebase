@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import SignupPage from './components/Signup';
+import LoginPage from './components/Login';
+import ProfileSetup from './components/ProfileSetup/ProfileSetup';
+import Homepage from './components/Homepage';
+import ProfilePage from './components/ProfilePage';
+import UserProfilePage from './components/ConnectionProfile';
 
 function App() {
+
+  function getUserData() {
+    const userData = localStorage.getItem('userData');
+    return userData ? JSON.parse(userData) : null;
+  };
+  const userData = getUserData();
+
+ 
+
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+
+      < Routes>
+        <Route path="/signup" element={<SignupPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/setup" element={<ProfileSetup/>} />
+        <Route path="/" element={userData? <Homepage/>: <Navigate to='/login'/> }/>
+        <Route path="/Myprofile" element = {userData? <ProfilePage/> : <Navigate to='/login'/>}/>
+        <Route path="/profile/:userId" element={<UserProfilePage />} />
+      </Routes>
+
+    
   );
 }
 
 export default App;
+

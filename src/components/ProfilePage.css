@@ -1,0 +1,76 @@
+.profile-page {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h1 {
+    margin: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+.profile-body {
+    
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.investment-preferences,
+.previous-investments {
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.investment-preferences h2,
+.previous-investments h2 {
+    margin-top: 0;
+}
+
+.previous-investments ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.previous-investments li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
