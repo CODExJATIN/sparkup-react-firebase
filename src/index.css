@@ -177,6 +177,8 @@ body {
 .navbar-container{
   position: sticky;
   z-index: 1000;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 
@@ -419,6 +421,44 @@ body {
   margin-top: 20px; /* Optional: Add some space above the button */
 }
 
+.startup-widget{
+  width:100%;
+
+}
+
+.startup-widget h2,h1{
+  text-align: center;
+}
+
+.startup-widget div p {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.go-back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.go-back-button:hover {
+  background-color: #0056b3;
+}
+
+.meeting-link{
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+
+.meeting-link:hover{
+  color:white;
+}
+
 
 
 @media screen and (max-width: 768px){
@@ -435,6 +475,7 @@ body {
 
   .navbar-container{
     position:unset;
+    overflow-y:unset ;
   }
 
   .horizontalbar-container{

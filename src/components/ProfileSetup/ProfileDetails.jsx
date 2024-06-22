@@ -2,14 +2,26 @@ import React from 'react'
 import About from '../../widgets/About'
 import InvestmentRange from '../../widgets/InvestmentRange'
 import InterestedIn from '../../widgets/InterestedIn'
+import StartupWidget from '../../widgets/StartupWidget'
 
-const ProfileDetails = ({about,min,max,types}) => {
+const ProfileDetails = ({userData}) => {
+
+
 
   return (
     <div className='profile-details-card'>
-            <About about={about}/>
-            <InvestmentRange min={min} max={max}/>
-            <InterestedIn types={types}/>
+     
+     
+      {
+        userData.accountType === 'startup' ? <StartupWidget userData={userData}/> :
+        (<>
+        <About about={userData.about}/>
+        <InvestmentRange min={userData.investmentRange[0]} max={userData.investmentRange[1]}/>
+        <InterestedIn types={userData.interestedIn}/> 
+        </>)
+      }
+      
+            
     </div>
   )
 }

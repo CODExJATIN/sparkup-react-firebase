@@ -42,11 +42,8 @@ const ProfilePage = () => {
       };
       const userData = getUserData();
 
-      const investmentRange = userData.investmentRange;
-      const min = investmentRange[0];
-      const max = investmentRange[1];
 
-      console.log(userData);
+      //console.log(userData);
 
       function logoutHandler() {
         localStorage.removeItem('userData');
@@ -59,7 +56,7 @@ const ProfilePage = () => {
         <div className="navigation active profile-bar">
             <div className="profile">
                 <div className="imgBx">
-                <img src={userData.photoURL} alt={`${userData.firstName}'s pfp`}/>
+                <img src={userData.photoURL? userData.photoURL: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"} alt={`${userData.firstName}'s pfp`}/>
                 </div>
                 <div className='user-details'>
                 <h3>{userData.firstName + ' ' + userData.lastName}</h3>
@@ -113,7 +110,7 @@ const ProfilePage = () => {
         </div> 
         
 
-        {isConnectionClicked? (<ConnectionDetails userId={userData.uid}/>):(<ProfileDetails about={userData.about} min={min} max={max} types={userData.interestedIn}/>)}
+        {isConnectionClicked? (<ConnectionDetails userId={userData.uid}/>):(<ProfileDetails userData={userData}/>)}
         
     </div>
   )

@@ -54,7 +54,7 @@ const SignupPage = () => {
       try {
         const { user } = await createUserWithEmailAndPassword(auth, values.email, values.password);
 
-        let photoURL = '';
+        let photoURL = 'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg';
         if (photo) {
           const photoRef = ref(storage, `profilePhotos/${user.uid}`);
           await uploadBytes(photoRef, photo);
@@ -95,7 +95,7 @@ const SignupPage = () => {
   });
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" sx={{height:'100vh'}}>
       <CssBaseline />
       <Box
         sx={{

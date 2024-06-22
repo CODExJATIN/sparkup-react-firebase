@@ -68,7 +68,7 @@ const FundersProfileSetup = ({ userId }) => {
         }}
       >
         <Typography component="h1" variant="h5">
-          Investor Profile Setup
+          Funder's Profile Setup
         </Typography>
         <Box component="form" onSubmit={formik.handleSubmit} sx={{ mt: 3 }}>
         <FormControl fullWidth margin="normal">
