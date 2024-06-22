@@ -69,7 +69,7 @@ const Navbar = () => {
         <span className="text">Meetings</span>
       </>
     </li>
-    <li>
+    <li>    
       <>
         <span className="icon">
           <ConnectWithoutContactIcon/>
