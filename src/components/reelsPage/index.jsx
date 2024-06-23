@@ -29,11 +29,7 @@ const ReelsPage = () => {
   return (
     <div className='reel-page'>
       <div className='reel-top'>
-        
-        
-        <MovieFilterIcon sx={{color:"white", fontSize:"150px"}}/>
-        <h1 className='reel-top-title'>SparkUp Reels</h1>
-
+        <h1 className='reel-top-title'><MovieFilterIcon/> SparkUp Reels</h1>
       </div>
 
       <div className='reel-videos'>

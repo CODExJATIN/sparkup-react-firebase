@@ -63,7 +63,7 @@ const Navbar = () => {
     </li>
     <li>
       <>
-      <a href="https://sparkup-meetings.vercel.app/" className='meeting-link' target='_blank'>
+      <a href="https://sparkup-meetings.vercel.app/" className='meeting-link' target='_blank' rel="noreferrer">
       <span className="icon">
           <GroupsIcon/>
         </span>

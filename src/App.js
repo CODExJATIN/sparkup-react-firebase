@@ -6,6 +6,7 @@ import ProfileSetup from './components/ProfileSetup/ProfileSetup';
 import Homepage from './components/Homepage';
 import ProfilePage from './components/ProfilePage';
 import UserProfilePage from './components/ConnectionProfile';
+import ReelsPage from './components/reelsPage';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={userData? <Homepage/>: <Navigate to='/login'/> }/>
         <Route path="/Myprofile" element = {userData? <ProfilePage/> : <Navigate to='/login'/>}/>
         <Route path="/profile/:userId" element={<UserProfilePage />} />
+        <Route path="/reels" element={<ReelsPage/>}/>
       </Routes>
 
     
